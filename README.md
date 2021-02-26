@@ -18,10 +18,10 @@ Verificando a versão do pacote curl:
 curl --version
 ```
 Caso apareça este retorno é necessário instalar o curl: <br/>
-![curl not found](/images/curl_not_found.png)
+![Curl Not Found](/images/curl_not_found.png)
 
 Porém caso apareça esse retorno no terminal pule a instalação do curl: <br/>
-![curl version](/images/curl_version.png)
+![Curl Version](/images/curl_version.png)
 
 Instalando curl:
 ```bash
@@ -85,7 +85,3 @@ rosversion -d
 ```
 3. Assim o terminar deverá ficar da seguinte forma: <br/>
 ![Version ROS](/images/ros_version.png)
-
-```bash
-
-```
