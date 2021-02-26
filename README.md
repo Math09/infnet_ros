@@ -38,7 +38,7 @@ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE
 sudo apt update
 ```
 
-**Passo 4:** Comando para instalar o ROS-1. &nbsp;
+**Passo 4:** Comando para instalar o ROS-1. <br/>
 *Usar APENAS um dos comando a seguir.*
 
 *Instalando ROS Desktop-Full (Instalação Completa).*
