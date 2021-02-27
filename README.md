@@ -145,3 +145,4 @@ sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
 ```bash
 sudo apt-get install -y libgazebo11-dev
 ```
+Após terminar a instalação volte ao **passo 1** para verificar se o Gazebo foi instalado corretamente.
