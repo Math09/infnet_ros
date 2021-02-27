@@ -85,3 +85,68 @@ rosversion -d
 ```
 3. Assim o terminar deverá ficar da seguinte forma: <br/>
 ![Version ROS](/images/ros_version.png)
+
+---
+## Verificando e Instalando o Gazebo
+**Passo 1:** Verificando se o gazebo foi instalado. <br/>
+Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
+
+1. O ícone deve estar no menu do sistema. <br/>
+*Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.*
+![gazebo icons]()
+
+2. Verificar a versão do Gazebo, no terminal.
+```bash
+gazebo --version
+```
+Possíveis retornos:
+```if( Se estiver instalado, esse será o retorno ):``` <br/>
+![gazebo version]()
+
+```else( Caso não esteja ):``` <br/>
+![gazebo version not found]()
+
+3. Verificar se as pastas '/gzserver' e '/gzclient' estão instaladas, no terminal. 
+```bash
+which gzserver && which gzclient
+```
+Possiveis retornos:
+```if( Se estiver instalado, esse será o retorno ):``` <br/>
+![gazebo folder]()
+
+```else( Caso não esteja ):``` <br/>
+![gazebo folder not found]()
+
+4. Tentar executar o comando para abrir o gazebo, no terminal.
+```bash
+gazebo
+```
+Possíveis retornos:
+```if( Se estiver instalado, esse será o retorno ):``` <br/>
+![gazebo open]() <br/>
+![gazebo terminal]()
+
+```else( Caso não esteja ):``` <br/>
+![gazebo not found]()
+
+**Passo 2:** Instalando o Gazebo (gazebo_ros_pkg).
+
+*Passo 2.1:* Instalando Debians pré construídos.
+```bash
+sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+```
+* Onde está a palavra noetic pode ser substituída por qualquer versão, tais como:
+    * ROS - Lunar
+    * ROS - Kinetic
+    * ROS - Indigo
+
+*Passo 2.2:* Instalando o Gazebo
+```bash
+sudo apt-get install -y libgazebo11-dev
+```
+
+
+
+```bash
+
+```
