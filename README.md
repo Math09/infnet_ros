@@ -1,7 +1,8 @@
 # Configurando ROS-1 (Noetic) e Gazebo
 A fim de instalar configurar e gerar exemplos de código para rodar o ROS-1 (Noetic) me fundamentei nos seguintes links:
 
-* [ROS-1 (Noetic)](http://wiki.ros.org/noetic/Installation/Ubuntu)
+* [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+* [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 
 ## 1. Instalando ROS-1 (Noetic)
 **Passo 1:** Configurar o sources.list para aceitar a instalação.
@@ -18,12 +19,12 @@ Verificando a versão do pacote curl:
 curl --version
 ```
 Caso apareça este retorno é necessário instalar o curl: <br/>
-![Curl Not Found](/images/curl_not_found.png)
+![curl not found](/images/curl_not_found.png)
 
 Porém caso apareça esse retorno no terminal pule a instalação do curl: <br/>
-![Curl Version](/images/curl_version.png)
+![curl version](/images/curl_version.png)
 
-Instalando curl:
+Instalando o pacote curl:
 ```bash
 sudo apt-get install curl
 ```
@@ -41,17 +42,17 @@ sudo apt update
 **Passo 4:** Comando para instalar o ROS-1. <br/>
 *Usar APENAS um dos comando a seguir.*
 
-*Instalando ROS Desktop-Full (Instalação Completa).*
+* Instalando ROS Desktop-Full (Instalação Completa).
 ```bash
 sudo apt install ros-noetic-desktop-full
 ```
 
-*Instalando ROS-Desktop.*
+* Instalando ROS-Desktop.
 ```bash
 sudo apt install ros-noetic-desktop
 ```
 
-*Instalando ROS-Base.*
+* Instalando ROS-Base.
 ```bash
 sudo apt install ros-noetic-ros-base
 ```
@@ -84,7 +85,7 @@ initros1
 rosversion -d
 ```
 3. Assim o terminar deverá ficar da seguinte forma: <br/>
-![Version ROS](/images/ros_version.png)
+![ros version](/images/ros_version.png)
 
 ---
 ## Verificando e Instalando o Gazebo
@@ -92,42 +93,42 @@ rosversion -d
 Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
 
 1. O ícone deve estar no menu do sistema. <br/>
-*Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.*
-![gazebo icons]()
+*Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.* <br/>
+![gazebo icons](/images/gazebo/gazebo_icon.png)
 
 2. Verificar a versão do Gazebo, no terminal.
 ```bash
 gazebo --version
 ```
-Possíveis retornos:
+Possíveis retornos: <br/>
 ```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo version]()
+![gazebo version](/images/gazebo/gazebo_version.png)
 
 ```else( Caso não esteja ):``` <br/>
-![gazebo version not found]()
+![gazebo version not found](/images/gazebo/gazebo_version_not_found.png)
 
 3. Verificar se as pastas '/gzserver' e '/gzclient' estão instaladas, no terminal. 
 ```bash
 which gzserver && which gzclient
 ```
-Possiveis retornos:
+Possiveis retornos: <br/>
 ```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo folder]()
+![gazebo folder](/images/gazebo/gazebo_folder.png)
 
 ```else( Caso não esteja ):``` <br/>
-![gazebo folder not found]()
+![gazebo folder not found](/images/gazebo/gazebo_folder_not_found.png)
 
 4. Tentar executar o comando para abrir o gazebo, no terminal.
 ```bash
 gazebo
 ```
-Possíveis retornos:
+Possíveis retornos: <br/>
 ```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo open]() <br/>
-![gazebo terminal]()
+![gazebo open](/images/gazebo/gazebo.png) <br/>
+![gazebo terminal](/images/gazebo/gazebo_terminal.png)
 
 ```else( Caso não esteja ):``` <br/>
-![gazebo not found]()
+![gazebo not found](/images/gazebo/gazebo_not_found.png)
 
 **Passo 2:** Instalando o Gazebo (gazebo_ros_pkg).
 
@@ -143,10 +144,4 @@ sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
 *Passo 2.2:* Instalando o Gazebo
 ```bash
 sudo apt-get install -y libgazebo11-dev
-```
-
-
-
-```bash
-
 ```
