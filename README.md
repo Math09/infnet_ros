@@ -4,7 +4,7 @@ A fim de instalar configurar e gerar exemplos de código para rodar o ROS-1 (Noe
 * [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 * [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 
-## 1. Instalando ROS-1 (Noetic)
+## Instalando ROS-1 (Noetic)
 **Passo 1:** Configurar o sources.list para aceitar a instalação.
 ```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -19,10 +19,10 @@ Verificando a versão do pacote curl:
 curl --version
 ```
 Caso apareça este retorno é necessário instalar o curl: <br/>
-![curl not found](/images/curl_not_found.png)
+![curl not found](/images/ros-noetic/curl_not_found.png)
 
 Porém caso apareça esse retorno no terminal pule a instalação do curl: <br/>
-![curl version](/images/curl_version.png)
+![curl version](/images/ros-noetic/curl_version.png)
 
 Instalando o pacote curl:
 ```bash
@@ -85,7 +85,7 @@ initros1
 rosversion -d
 ```
 3. Assim o terminar deverá ficar da seguinte forma: <br/>
-![ros version](/images/ros_version.png)
+![ros version](/images/ros-noetic/ros_version.png)
 
 ---
 ## Verificando e Instalando o Gazebo
