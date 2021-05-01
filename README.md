@@ -109,6 +109,9 @@ rosversion -d
 
 ---
 ## Verificando e Instalando o Gazebo.
+Fluxograma para a verificação/instalação do Gazebo. </br>
+![flowchart gazebo](/images/flowchart_gazebo.png)
+
 **Passo 1:** Verificando se o gazebo foi instalado. <br/>
 Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
 
