@@ -1,10 +1,13 @@
-# Configurando ROS-1 (Noetic) e Gazebo
+# Configurando ROS-1 (Noetic) e Gazebo.
 A fim de instalar configurar e gerar exemplos de código para rodar o ROS-1 (Noetic) me fundamentei nos seguintes links:
 
 * [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 * [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 
-## Instalando ROS-1 (Noetic)
+Fluxograma para a instalação do ROS-1 (Noetic). </br>
+![flowchart install ros noetic](/images/flowchart_install_ros_noetic.png)
+
+## Instalando ROS-1 (Noetic).
 **Passo 1:** Configurar o sources.list para aceitar a instalação.
 ```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -57,20 +60,36 @@ sudo apt install ros-noetic-desktop
 sudo apt install ros-noetic-ros-base
 ```
 
-**Passo 5:** Configurando o caminho do ROS-1.
+**Passo 5:** Instalando dependências para construção de pacotes.
+```bash
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+```
 
-*Passo 5.1:* Abrindo o arquivo '.bashrc'.
+**Passo 6:** Configurando Rosdep.
+*Passo 6.1:* Inicializando Rosdep.
+```bash
+sudo rosdep init
+```
+
+*Passo 6.2:* Atualizando Rosdep.
+```bash
+rosdep update
+```
+
+**Passo 7:** Configurando o caminho do ROS-1.
+
+*Passo 7.1:* Abrindo o arquivo '.bashrc'.
 ```bash
 sudo gedit .bashrc
 ```
 
-*Passo 5.2:* Criando o alias initros1.
+*Passo 7.2:* Criando o alias initros1.
 (Adicionar esse caminho ao '.bashrc' - normalmente pode ser adicionado no final do arquivo)
 ```bash
 alias initros1="source /opt/ros/noetic/setup.bash";
 ```
 
-*Passo 5.3:* Atualizando '.bashrc'.
+*Passo 7.3:* Atualizando '.bashrc'.
 ```bash
 source .bashrc
 ```
@@ -88,7 +107,7 @@ rosversion -d
 ![ros version](/images/ros-noetic/ros_version.png)
 
 ---
-## Verificando e Instalando o Gazebo
+## Verificando e Instalando o Gazebo.
 **Passo 1:** Verificando se o gazebo foi instalado. <br/>
 Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
 
