@@ -1,9 +1,10 @@
-## Configurando pasta catkin_ws
+## Configurando pasta catkin_ws.
 
 **Passo 1:** Executando o comando para atribuir a versão noetic.
 ```bash
 initros1
 ```
+
 Verificando a versão atribuída:
 ```bash
 rosversion -d
@@ -13,7 +14,7 @@ Assim deverá ser o retono, no terminal: <br/>
 ![ros version](/images/ros_version.png)
 
 **Passo 2:** Criando pasta que será o pacote para o ROS-1. <br/>
-*Normalmente a pasta catkin_ws é criada na Pasta Pessoal, '/home/[nome_do_usuario]/', do usuário ou dentro de uma pasta workspace (na Pasta Pessoa), caso se utilize mais de uma versão do ROS.*
+*Normalmente a pasta catkin_ws é criada na Pasta Pessoal do usuário, '/home/[nome_do_usuario]/', ou dentro de uma pasta workspace (também na Pasta Pessoal), caso se utilize mais de uma versão do ROS.*
 ```bash
 mkdir -p ~/catkin_ws/src
 ```
@@ -28,12 +29,12 @@ cd ~/catkin_ws/src
 catkin_init_workspace
 ```
 
-Ocorrenco esse retorno, no terminal: <br/>
+Ocorrendo esse retorno, no terminal: <br/>
 ![init workspace](/images/init_workspace.png)
 
-Desta forma é gerado o arquivo CMakeLists.txt.
+**Desta forma é gerado o arquivo CMakeLists.txt.**
 
-**Passo 5:** Retornando para a pasta raiz do catkin_ws.<br/>
+**Passo 5:** Retornando para a pasta raiz do catkin_ws. <br/>
 Usar APENAS um dos comandos a seguir: <br/>
 ```bash
 cd ~/catkin_ws/
