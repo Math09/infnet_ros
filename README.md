@@ -66,6 +66,7 @@ sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator 
 ```
 
 **Passo 6:** Configurando Rosdep.
+
 *Passo 6.1:* Inicializando Rosdep.
 ```bash
 sudo rosdep init
