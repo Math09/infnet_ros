@@ -1,5 +1,11 @@
 ## Configurando pasta catkin_ws.
 
+Com a finalidade de criar e configurar a pasta catkin_ws me fundamentei no link:
+* [BuildingPackages](http://wiki.ros.org/noetic/Installation/Ubuntu)
+
+Fluxograma para a criação/configuração da pasta catkin_ws.
+![flowchart create folder](/images/flowchart_create_folder.png)
+
 **Passo 1:** Executando o comando para atribuir a versão noetic.
 ```bash
 initros1
@@ -35,7 +41,7 @@ Ocorrendo esse retorno, no terminal: <br/>
 **Desta forma é gerado o arquivo CMakeLists.txt.**
 
 **Passo 5:** Retornando para a pasta raiz do catkin_ws. <br/>
-Usar APENAS um dos comandos a seguir: <br/>
+*Usar APENAS um dos comandos a seguir:* <br/>
 ```bash
 cd ~/catkin_ws/
 ```
@@ -127,3 +133,8 @@ Assim deverá ficar o alias com os dois caminhos:
 alias initros1="source /opt/ros/noetic/setup.bash && source ~/catkin_ws/devel/setup.bash";
 ```
 Após isso salve e feche o arquivo.
+
+*Passo 7.4:* Atualizando .bashrc.
+```bash
+source .bashrc
+```
