@@ -89,6 +89,7 @@ sudo gedit .bashrc
 ```bash
 alias initros1="source /opt/ros/noetic/setup.bash";
 ```
+Após isso, salve e feche o arquivo '.bashrc'.
 
 *Passo 7.3:* Atualizando '.bashrc'.
 ```bash
