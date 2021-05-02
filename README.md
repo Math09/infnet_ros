@@ -1,4 +1,4 @@
-# Configurando ROS-1 (Noetic) e Gazebo.
+# Instalando e configurando ROS-1 (Noetic) e Gazebo.
 A fim de instalar configurar e gerar exemplos de código para rodar o ROS-1 (Noetic) me fundamentei nos seguintes links:
 
 * [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
@@ -89,7 +89,7 @@ sudo gedit .bashrc
 ```bash
 alias initros1="source /opt/ros/noetic/setup.bash";
 ```
-Após isso, salve e feche o arquivo '.bashrc'.
+Após adicionar o alias salve e feche o arquivo '.bashrc'.
 
 *Passo 7.3:* Atualizando '.bashrc'.
 ```bash
