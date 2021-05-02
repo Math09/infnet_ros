@@ -1,5 +1,5 @@
-# Instalando e configurando ROS-1 (Noetic) e Gazebo.
-A fim de instalar configurar e gerar exemplos de código para rodar o ROS-1 (Noetic) me fundamentei nos seguintes links:
+# Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).
+A fim de instalar, configurar e executar o ROS-1 (Noetic) e o Gazebo (gazebo_ros_pkg) me fundamentei nos seguintes links:
 
 * [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 * [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
@@ -109,7 +109,7 @@ rosversion -d
 ![ros version](/images/ros-noetic/ros_version.png)
 
 ---
-## Verificando e Instalando o Gazebo.
+## Verificando e Instalando o Gazebo (gazebo_ros_pkg).
 Fluxograma para a verificação/instalação do Gazebo. </br>
 ![flowchart gazebo](/images/flowchart_gazebo.png)
 
@@ -170,3 +170,8 @@ sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
 sudo apt-get install -y libgazebo11-dev
 ```
 Após terminar a instalação volte ao **passo 1** para verificar se o Gazebo foi instalado corretamente.
+
+---
+Depois que terminar todas as instalações - ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg) - é necessário criar e configurar a pasta catkin_ws. A fim de resolver isso criei o tutorial a seguir:
+
+* [Criando e configurando pasta catkin_ws](https://github.com/Math09/infnet_ros/tree/creating_catkin_ws_folder)
