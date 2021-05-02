@@ -1,4 +1,4 @@
-## Configurando pasta catkin_ws.
+## Criando e configurando workspace catkin_ws.
 
 Com a finalidade de criar e configurar a pasta catkin_ws me fundamentei no link:
 * [BuildingPackages](http://wiki.ros.org/noetic/Installation/Ubuntu)
@@ -19,8 +19,8 @@ rosversion -d
 Assim deverá ser o retono, no terminal: <br/>
 ![ros version](/images/ros_version.png)
 
-**Passo 2:** Criando pasta que será o pacote para o ROS-1. <br/>
-*Normalmente a pasta catkin_ws é criada na Pasta Pessoal do usuário, '/home/[nome_do_usuario]/', ou dentro de uma pasta workspace (também na Pasta Pessoal), caso se utilize mais de uma versão do ROS.*
+**Passo 2:** Criando workspace que será o pacote para o ROS-1. <br/>
+*Normalmente a workspace catkin_ws é criada na Pasta Pessoal do usuário, '/home/[nome_do_usuario]/', ou dentro de uma outra pasta workspace (também na Pasta Pessoal), caso se utilize mais de uma versão do ROS.*
 ```bash
 mkdir -p ~/catkin_ws/src
 ```
@@ -138,3 +138,7 @@ Após isso salve e feche o arquivo.
 ```bash
 source .bashrc
 ```
+
+---
+Caso a criação e nem a configuração do workspace catkin_ws funcione, pode ser que não esteja com o ROS-1 (Noetic) instalado. Para isso volte para o tutorial:
+* [Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).](https://github.com/Math09/infnet_ros/tree/ros_noetic)
