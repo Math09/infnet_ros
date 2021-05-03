@@ -13,6 +13,8 @@ sudo apt update && sudo apt install curl gnupg2 lsb-release
 ```
 
 **Passo 2:** Configurando chave.
+> Antes de realizar o comando para configurar a chave, é necessário verificar se o pacote curl está instalado no sistema.
+
 ---
 Verificando a versão do pacote curl:
 ```bash
@@ -44,16 +46,21 @@ https://github.com/ros2/ros2/releases/tag/release-foxy-20201211
 ```
 
 **Passo 5:** Extraindo instalador.
-*Antes de extrair mover o arquivo compactado para '/opt/ros'.* </br>
+> Antes de extrair mover o arquivo compactado para '/opt/ros'.
+* Movendo arquivo.
+
+
 Comando: 
 ```bash
-sudo mv nome_do_arquivo
+sudo mv nome_do_arquivo /caminho_da_pasta
 ```
 
 Exemplo: 
 ```bash
 sudo mv ros2-foxy-20201211-linux-focal-amd64.tar.bz2 /opt/ros
 ```
+* Extraindo arquivo.
+
 
 Comando: 
 ```bash
