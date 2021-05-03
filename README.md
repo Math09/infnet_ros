@@ -72,55 +72,55 @@ Exemplo:
 sudo tar xf ros2-foxy-20201211-linux-focal-amd64.tar.bz2
 ```
 
-**Passo 6:** Atualizando pacotes.
+**Passo 6:** Configurando o caminho do ROS-2.
+
+*Passo 6.1:* Abrindo o arquivo '.bashrc'.
+```bash
+sudo gedit .bashrc
+```
+
+*Passo 6.2:* Criando alias initros2.
+```bash
+alias initros2="source /opt/ros/ros2-linux/local_setup.bash";
+```
+
+*Passo 6.3:* Atualizando '.bashrc'.
+```bash
+source .bashrc
+```
+
+**Passo 7:** Atualizando pacotes.
 ```bash
 sudo apt update
 ```
 
-**Passo 7:** Instalando pacote 'python3-rosdep'.
+**Passo 8:** Instalando pacote 'python3-rosdep'.
 ```bash
 sudo apt install -y python3-rosdep
 ```
 
-**Passo 8:** Configurando Rosdep.
+**Passo 9:** Configurando Rosdep.
 
-*Passo 8.1:* Inicializando Rosdep.
+*Passo 9.1:* Inicializando Rosdep.
 ```bash
 sudo rosdep init
 ```
 
-*Passo 8.2:* Atualizando Rosdep.
+*Passo 9.2:* Atualizando Rosdep.
 ```bash
 rosdep update
 ```
 
-**Passo 9:** Instalando dependências ausentes.
+**Passo 10:** Instalando dependências ausentes.
 ```bash
-rosdep install --from-paths ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys "console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
+rosdep install --from-paths /opt/ros/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys "console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
 ```
 
-**Passo 10:** Instalando bibliotecas do python3.
+**Passo 11:** Instalando bibliotecas do python3.
 ```bash
 sudo apt install -y libpython3-dev python3-pip
 ```
 
 ```bash
 pip3 install -U argcomplete
-```
-
-**Passo 11:** Configurando o caminho do ROS-2.
-
-*Passo 11.1:* Abrindo o arquivo '.bashrc'.
-```bash
-sudo gedit .bashrc
-```
-
-*Passo 11.2:* Criando alias initros2.
-```bash
-alias initros2="source /opt/ros/ros2-linux/local_setup.bash";
-```
-
-*Passo 11.3:* Atualizando '.bashrc'.
-```bash
-source .bashrc
 ```
