@@ -3,8 +3,8 @@
 Com a finalidade de criar e configurar a pasta catkin_ws me fundamentei no link:
 * [BuildingPackages](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
-Fluxograma para a criação/configuração da pasta catkin_ws.
-![flowchart create folder](/images/flowchart_create_folder.png)
+Fluxograma para a criação/configuração da pasta catkin_ws. <br/>
+![flowchart create folder](/images/flowchart_catkin_ws.png)
 
 **Passo 1:** Executando o comando para atribuir a versão noetic.
 ```bash
