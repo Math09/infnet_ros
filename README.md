@@ -5,7 +5,7 @@ A fim de instalar, configurar e executar o ROS-1 (Noetic) e o Gazebo (gazebo_ros
 * [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
 
 Fluxograma para a instalação do ROS-1 (Noetic). </br>
-![flowchart install ros noetic](/images/flowchart_install_ros_noetic.png)
+![flowchart install ros noetic](/images/flowchart_ros_noetic.png)
 
 ## Instalando ROS-1 (Noetic).
 **Passo 1:** Configurar o sources.list para aceitar a instalação.
