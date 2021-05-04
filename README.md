@@ -111,7 +111,7 @@ initros1
 ```bash
 rosversion -d
 ```
-3. Assim o terminar deverá ficar da seguinte forma: <br/>
+3. Assim o terminal deverá ficar da seguinte forma: <br/>
 ![ros version](/images/ros-noetic/ros_version.png)
 
 ---
