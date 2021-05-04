@@ -180,4 +180,4 @@ sudo apt-get install -y libgazebo11-dev
 ---
 Depois que terminar todas as instalações - ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg) - é necessário criar e configurar a pasta catkin_ws. A fim de resolver isso criei o tutorial a seguir:
 
-* [Criando e configurando workspace catkin_ws](https://github.com/Math09/infnet_ros/tree/creating_catkin_ws_folder)
+* [Criando e configurando workspace catkin_ws.](https://github.com/Math09/infnet_ros/tree/creating_catkin_ws_folder)
