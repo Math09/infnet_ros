@@ -5,7 +5,7 @@ A fim de instalar, configurar e executar o ROS-2 (Foxy), me fundamentei nos segu
 * [ROS 2 Foxy Fitzroy - Patch Release 4](https://github.com/ros2/ros2/releases/tag/release-foxy-20201211)
 
 Fluxograma para instalação do ROS-2 (Foxy). </br>
-![flowchart install ros foxy](/images/flowchart_install_ros_foxy.png)
+![flowchart install ros foxy](/images/flowchart_ros_foxy.png)
 
 ## Instalando ROS-2 (Foxy).
 **Passo 1:** Instando pacotes necessários (curl | gnupg2 | lsb-release).
