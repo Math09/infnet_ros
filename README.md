@@ -1,4 +1,4 @@
-# Instalando e Configurando ROS-2 (Foxy).
+# Instalando e configurando ROS-2 (Foxy).
 A fim de instalar, configurar e executar o ROS-2 (Foxy), me fundamentei nos seguintes links:
 
 * [Installing ROS 2 on Ubuntu Linux](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Binary.html)
@@ -111,4 +111,4 @@ pip3 install -U argcomplete
 ---
 Depois que terminar a instalação - ROS-2 (Foxy) - é necessário criar e configurar a pasta dev_ws. A fim de resolver isso criei o tutorial a seguir:
 
-* [Criando e configurando workspace dev_ws.]()
+* [Criando e configurando workspace dev_ws.](https://github.com/Math09/infnet_ros/tree/dev_ws)
