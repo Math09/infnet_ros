@@ -7,6 +7,7 @@ A fim de instalar, configurar e executar o ROS-2 (Foxy), me fundamentei nos segu
 Fluxograma para instalação do ROS-2 (Foxy). </br>
 ![flowchart install ros foxy](/images/flowchart_install_ros_foxy.png)
 
+## Instalando ROS-2 (Foxy).
 **Passo 1:** Instando pacotes necessários (curl | gnupg2 | lsb-release).
 ```bash
 sudo apt update && sudo apt install curl gnupg2 lsb-release
@@ -27,7 +28,7 @@ sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.or
 https://github.com/ros2/ros2/releases/tag/release-foxy-20201211
 ```
 
-**Passo 5:** Extraindo instalador.
+**Passo 5:** Extraindo instalador. <br/>
  -> Antes de extrair, mover o arquivo compactado para '/opt/ros'.
 * Movendo arquivo.
 
@@ -93,7 +94,7 @@ sudo rosdep init
 rosdep update
 ```
 
-**Passo 10:** Instalando dependências ausentes.
+**Passo 10:** Instalando dependências ausentes. <br/>
  -> *AVISO: O caminho '/opt/ros/ros2-linux/share' varia dependendo de onde se põe o instalador do ROS-2.*
 ```bash
 rosdep install --from-paths /opt/ros/ros2-linux/share --ignore-src --rosdistro foxy -y --skip-keys "console_bridge fastcdr fastrtps osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
@@ -106,6 +107,25 @@ sudo apt install -y libpython3-dev python3-pip
 
 ```bash
 pip3 install -U argcomplete
+```
+
+## Após a instalação execute os comandos a seguir para atribuir e verificar a versão ROS. <br/> 
+1. Comando para atribuir a versão do ROS.
+```bash
+initros2
+```
+
+2. Comando para verificar a versão do ROS.
+```bash
+rosversion -d
+```
+
+3. Assim o terminal deverá ficar da seguinte forma. <br/>
+![ros version](/images/ros_version.png)
+
+No print aparece o warning, pois existem duas versões do ROS em uma mesma pasta - /opt/ros:
+```bash
+[connext_cmake_module] Warning: The location at which Connext was found when the workspace was built [[/opt/rti.com/rti_connext_dds-5.3.1]] does not point to a valid directory, and the NDDSHOME environment variable has not been set. Support for Connext will not be available.
 ```
 
 ---
