@@ -21,10 +21,10 @@ Verificando a versão do pacote curl:
 ```bash
 curl --version
 ```
-Caso apareça este retorno é necessário instalar o curl: <br/>
+```if( Caso não esteja ):``` <br/>
 ![curl not found](/images/ros-noetic/curl_not_found.png)
 
-Porém caso apareça esse retorno no terminal pule a instalação do curl: <br/>
+```else( Se estiver instalado, esse será o retorno ):``` <br/>
 ![curl version](/images/ros-noetic/curl_version.png)
 
 Instalando o pacote curl:
@@ -175,7 +175,7 @@ sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
 ```bash
 sudo apt-get install -y libgazebo11-dev
 ```
- -> Após terminar a instalação volte ao **passo 1** para verificar se o Gazebo foi instalado corretamente.
+ -> Após terminar a instalação volte à **[verificação do Gazebo](https://github.com/Math09/infnet_ros/tree/ros_noetic#verificando-e-instalando-o-gazebo-gazebo_ros_pkg)** para determinar se foi instalado corretamente.
 
 ---
 Depois que terminar todas as instalações - ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg) - é necessário criar e configurar a pasta catkin_ws. A fim de resolver isso criei o tutorial a seguir:
