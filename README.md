@@ -4,7 +4,7 @@ Com a finalidade de criar e configurar a pasta dev_ws me fundamentei no link:
 * [ROS-2 (Foxy)](https://lms.infnet.edu.br/moodle/pluginfile.php/770517/mod_resource/content/1/7.Comunicacao%20em%20ROS2.pdf)
 
 Fluxograma para a criação da pasta dev_ws. <br/>
-![flowchart create folder]()
+![flowchart create folder](/images/flowchart_dev_ws.png)
 
 **Passo 1:** Executando o comando para atribuir a versão foxy.
 ```bash
@@ -17,7 +17,7 @@ rosversion -d
 ```
 
 Assim deverá ser o retorno, no terminal: <br/>
-![ros version]()
+![ros version](/images/ros_version.png)
 
 No print aparece o warning, pois existem duas versões do ROS em uma mesma pasta - /opt/ros:
 ```bash
@@ -90,4 +90,5 @@ source .bashrc
 
 ---
 Antes de criar e configurar o workspace dev_ws é necessário instalar o ROS-2 (Foxy), para isso volte ao tutorial:
-* [Instalando e configurando ROS-2 (Foxy)](https://github.com/Math09/infnet_ros/tree/ros_foxy)
+
+* [Instalando e configurando ROS-2 (Foxy).](https://github.com/Math09/infnet_ros/tree/ros_foxy)
