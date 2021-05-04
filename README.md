@@ -19,8 +19,8 @@ rosversion -d
 Assim deverá ser o retono, no terminal: <br/>
 ![ros version](/images/ros_version.png)
 
-**Passo 2:** Criando workspace que será o pacote para o ROS-1. <br/>
-*Normalmente a workspace catkin_ws é criada na Pasta Pessoal do usuário, '/home/[nome_do_usuario]/', ou dentro de uma outra pasta workspace (também na Pasta Pessoal), caso se utilize mais de uma versão do ROS.*
+**Passo 2:** Criando pasta que será o pacote para o ROS-1. <br/>
+ -> *Normalmente a workspace catkin_ws é criada na Pasta Pessoal do usuário, '/home/[nome_do_usuario]/', ou dentro de uma outra pasta workspace (também na Pasta Pessoal), caso se utilize mais de uma versão do ROS.*
 ```bash
 mkdir -p ~/catkin_ws/src
 ```
@@ -38,14 +38,15 @@ catkin_init_workspace
 Ocorrendo esse retorno, no terminal: <br/>
 ![init workspace](/images/init_workspace.png)
 
-**Desta forma é gerado o arquivo CMakeLists.txt.**
+ -> **Desta forma é gerado o arquivo 'CMakeLists.txt'.**
 
 **Passo 5:** Retornando para a pasta raiz do catkin_ws. <br/>
-*Usar APENAS um dos comandos a seguir:* <br/>
+ -> *Usar APENAS um dos comandos a seguir:* <- <br/>
 ```bash
 cd ~/catkin_ws/
 ```
-Ou
+
+Ou pode usar esse comando alternativo:
 ```bash
 cd ..
 ```
@@ -113,7 +114,7 @@ Após executar o comando são geradas duas pastas:
 
 **Passo 7:** Adicionando o caminho do catkin ao alias 'initros1'.
 
-*Passo 7.1:* Retornando a pasta raiz do ubuntu.
+*Passo 7.1:* Retornando a pasta raiz do Ubuntu.
 ```bash
 cd
 ```
@@ -132,7 +133,8 @@ Assim deverá ficar o alias com os dois caminhos:
 ```bash
 alias initros1="source /opt/ros/noetic/setup.bash && source ~/catkin_ws/devel/setup.bash";
 ```
-Após isso salve e feche o arquivo.
+
+-> Após adicionar o alias salve e feche o arquivo '.bashrc'.
 
 *Passo 7.4:* Atualizando .bashrc.
 ```bash
