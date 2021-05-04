@@ -14,7 +14,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 ```
 
 **Passo 2:** Configurando chave. <br/>
-*Antes de realizar o comando para configurar a chave, é necessário verificar se o pacote **curl** está instalado no sistema.*
+ -> *Antes de realizar o comando para configurar a chave, é necessário verificar se o pacote **curl** está instalado no sistema.*
 
 ---
 Verificando a versão do pacote curl:
@@ -33,8 +33,14 @@ sudo apt-get install curl
 ```
 ---
 
+Comando usando **curl**:
 ```bash
 curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+```
+
+Comando alternativo usando **apt-key**:
+```bash
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 ```
 
 **Passo 3:** Atualizando pacotes do sistema.
@@ -43,7 +49,7 @@ sudo apt update
 ```
 
 **Passo 4:** Comando para instalar o ROS-1. <br/>
-*Usar APENAS um dos comando a seguir.*
+ -> *Usar APENAS um dos comando a seguir.* <- 
 
 * Instalando ROS Desktop-Full (Instalação Completa).
 ```bash
@@ -84,12 +90,12 @@ rosdep update
 sudo gedit .bashrc
 ```
 
-*Passo 7.2:* Criando o alias initros1.
-(Adicionar esse caminho ao '.bashrc' - normalmente pode ser adicionado no final do arquivo)
+*Passo 7.2:* Criando o alias initros1. <br/>
+ -> Adicionar o caminho abaixo no '.bashrc' - normalmente pode ser adicionado no final do arquivo.
 ```bash
 alias initros1="source /opt/ros/noetic/setup.bash";
 ```
-Após adicionar o alias salve e feche o arquivo '.bashrc'.
+ -> Após adicionar o alias salve e feche o arquivo '.bashrc'.
 
 *Passo 7.3:* Atualizando '.bashrc'.
 ```bash
@@ -113,14 +119,14 @@ rosversion -d
 Fluxograma para a verificação/instalação do Gazebo. </br>
 ![flowchart gazebo](/images/flowchart_gazebo.png)
 
-**Passo 1:** Verificando se o gazebo foi instalado. <br/>
-Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
+**Passo 1:** Verificando se o gazebo está instalado. <br/>
+ -> Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
 
-1. O ícone deve estar no menu do sistema. <br/>
-*Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.* <br/>
+*Passo 1.1:* O ícone deve estar no menu do sistema. <br/>
+ -> *Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.* <br/>
 ![gazebo icons](/images/gazebo/gazebo_icon.png)
 
-2. Verificar a versão do Gazebo, no terminal.
+*Passo 1.2:* Verificar a versão do Gazebo, no terminal.
 ```bash
 gazebo --version
 ```
@@ -131,7 +137,7 @@ Possíveis retornos: <br/>
 ```else( Caso não esteja ):``` <br/>
 ![gazebo version not found](/images/gazebo/gazebo_version_not_found.png)
 
-3. Verificar se as pastas '/gzserver' e '/gzclient' estão instaladas, no terminal. 
+*Passo 1.3:* Verificar se as pastas '/gzserver' e '/gzclient' estão instaladas, no terminal. 
 ```bash
 which gzserver && which gzclient
 ```
@@ -142,7 +148,7 @@ Possiveis retornos: <br/>
 ```else( Caso não esteja ):``` <br/>
 ![gazebo folder not found](/images/gazebo/gazebo_folder_not_found.png)
 
-4. Tentar executar o comando para abrir o gazebo, no terminal.
+*Passo 1.4:* Tentar executar o comando para abrir o gazebo, no terminal.
 ```bash
 gazebo
 ```
@@ -169,7 +175,7 @@ sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
 ```bash
 sudo apt-get install -y libgazebo11-dev
 ```
-Após terminar a instalação volte ao **passo 1** para verificar se o Gazebo foi instalado corretamente.
+ -> Após terminar a instalação volte ao **passo 1** para verificar se o Gazebo foi instalado corretamente.
 
 ---
 Depois que terminar todas as instalações - ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg) - é necessário criar e configurar a pasta catkin_ws. A fim de resolver isso criei o tutorial a seguir:
