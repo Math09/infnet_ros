@@ -7,7 +7,7 @@
 > Durante o semestre de robótica foram usadas as versões 1 (Noetic) e 2 (Foxy) do Framework Robot Oprating System e o Gazbo 11 no Ubuntu 20.04 LTS. Desta forma foram gerados 5 artigos de instalações e configurações.
 
 ## Fluxograma completo: <br/>
-* [Aqui você pode fazer o download do fluxograma em PDF completo.]()
+* [Aqui você pode fazer o download do fluxograma em PDF completo.](https://github.com/Math09/infnet_ros/raw/main/pdf/ROS-1_ROS-2.pdf)
 
 ![flowchart](/images/flowchart_complete.png)
 
