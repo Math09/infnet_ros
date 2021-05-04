@@ -13,8 +13,8 @@
 
 ## Tutoriais criados (branchs).
 
-### * [Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).](https://github.com/Math09/infnet_ros/tree/ros_noetic)
-### * [Criando e configurando workspace catkin_ws.](https://github.com/Math09/infnet_ros/tree/catkin_ws) 
-### * [Instalando e configurando ROS-2 (Foxy).](https://github.com/Math09/infnet_ros/tree/ros_foxy) 
-### * [Criando e configurando workspace dev_ws.](https://github.com/Math09/infnet_ros/tree/dev_ws) 
+### * [(ros_noetic) | Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).](https://github.com/Math09/infnet_ros/tree/ros_noetic)
+### * [(catkin_ws) | Criando e configurando workspace catkin_ws.](https://github.com/Math09/infnet_ros/tree/catkin_ws) 
+### * [(ros_foxy) | Instalando e configurando ROS-2 (Foxy).](https://github.com/Math09/infnet_ros/tree/ros_foxy) 
+### * [(dev_ws) | Criando e configurando workspace dev_ws.](https://github.com/Math09/infnet_ros/tree/dev_ws) 
 ### * [MoveIt]() 
