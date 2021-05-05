@@ -1,4 +1,9 @@
 # Instalando e configurando ROS-2 (Foxy).
+
+<p align="center" width="100%">
+    <img src="https://github.com/Math09/infnet_ros/blob/main/images/ros_foxy_logo.png"> 
+</p>
+
 A fim de instalar, configurar e executar o ROS-2 (Foxy), me fundamentei nos seguintes links:
 
 * [Installing ROS 2 on Ubuntu Linux](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Binary.html)
