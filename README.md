@@ -1,4 +1,9 @@
 # Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).
+
+<p align="center" width="100%">
+    <img src="https://github.com/Math09/infnet_ros/blob/main/images/ros_noetic_logo.png"> 
+</p>
+
 A fim de instalar, configurar e executar o ROS-1 (Noetic) e o Gazebo (gazebo_ros_pkg) me fundamentei nos seguintes links:
 
 * [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
