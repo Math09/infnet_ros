@@ -1,183 +1,110 @@
-# Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).
-A fim de instalar, configurar e executar o ROS-1 (Noetic) e o Gazebo (gazebo_ros_pkg) me fundamentei nos seguintes links:
+# Instalando e configurando MoveIt Motion Planning Framework.
 
-* [ROS-1 (Noetic) - Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
-* [Gazebo (gazebo_ros_pkgs) - Installing gazebo_ros_pkgs (ROS 1)](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
+![moveit logo](/images/moveit_logo.png)
 
-Fluxograma para a instalação do ROS-1 (Noetic). </br>
-![flowchart install ros noetic](/images/flowchart_ros_noetic.png)
+A fim de instalar, configurar e executar simulações do Moveit Motion Planning Framework me fundamentei no seguinte artigo:
 
-## Instalando ROS-1 (Noetic).
-**Passo 1:** Configurar o sources.list para aceitar a instalação.
-```bash
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-```
+* [Getting Started — moveit_tutorials Noetic documentation](https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html)
 
-**Passo 2:** Configurando chave. <br/>
- -> *Antes de realizar o comando para configurar a chave, é necessário verificar se o pacote **curl** está instalado no sistema.*
+Fluxograma para a instalação do MoveIt.<br/>
+![flowchart install moveit](/images/flowchart_moveit.png)
 
 ---
-Verificando a versão do pacote curl:
-```bash
-curl --version
-```
-```if( Caso não esteja ):``` <br/>
-![curl not found](/images/ros-noetic/curl_not_found.png)
+Antes de fazer tais instalação do MoveIt é necessário ter o ROS-1 (Noetic) instalado, para isso vá até o artigo abaixo:
 
-```else( Se estiver instalado, esse será o retorno ):``` <br/>
-![curl version](/images/ros-noetic/curl_version.png)
-
-Instalando o pacote curl:
-```bash
-sudo apt-get install curl
-```
+* [Instalando e configurando ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg).](https://github.com/Math09/infnet_ros/tree/ros_noetic)
 ---
 
-Comando usando **curl**:
-```bash
-curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
-```
+**Passo 1:** Atualizando pacotes ROS.
 
-Comando alternativo usando **apt-key**:
-```bash
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-```
-
-**Passo 3:** Atualizando pacotes do sistema.
-```bash
-sudo apt update
-```
-
-**Passo 4:** Comando para instalar o ROS-1. <br/>
- -> *Usar APENAS um dos comando a seguir.* <- 
-
-* Instalando ROS Desktop-Full (Instalação Completa).
-```bash
-sudo apt install ros-noetic-desktop-full
-```
-
-* Instalando ROS-Desktop.
-```bash
-sudo apt install ros-noetic-desktop
-```
-
-* Instalando ROS-Base.
-```bash
-sudo apt install ros-noetic-ros-base
-```
-
-**Passo 5:** Instalando dependências para construção de pacotes.
-```bash
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-```
-
-**Passo 6:** Configurando Rosdep.
-
-*Passo 6.1:* Inicializando Rosdep.
-```bash
-sudo rosdep init
-```
-
-*Passo 6.2:* Atualizando Rosdep.
+*Passo 1.1:* Atualizando Rosdep.
 ```bash
 rosdep update
 ```
 
-**Passo 7:** Configurando o caminho do ROS-1.
-
-*Passo 7.1:* Abrindo o arquivo '.bashrc'.
+*Passo 1.2:* Atualizando pacotes do sistema.
 ```bash
-sudo gedit .bashrc
+sudo apt update
 ```
 
-*Passo 7.2:* Criando o alias initros1. <br/>
- -> Adicionar o caminho abaixo no '.bashrc' - normalmente pode ser adicionado no final do arquivo.
+*Passo 1.3:* Atualização geral.
 ```bash
-alias initros1="source /opt/ros/noetic/setup.bash";
-```
- -> Após adicionar o alias salve e feche o arquivo '.bashrc'.
-
-*Passo 7.3:* Atualizando '.bashrc'.
-```bash
-source .bashrc
+sudo apt dist-upgrade
 ```
 
-### Após a instalação execute os comandos a seguir para atribuir e verificar a versão do ROS. <br/>
-1. Comando para atribuir a versão do ROS.
+**Passo 2:** Instalando o sistema de compilação ROS (catkin).
 ```bash
-initros1
+sudo apt install ros-noetic-catkin python3-catkin-tools
 ```
-2. Comando para verificar a versão do ROS.
+
+
+**Passo 3:** Instalando o wstool.
 ```bash
-rosversion -d
+sudo apt install python3-wstool
 ```
-3. Assim o terminal deverá ficar da seguinte forma: <br/>
-![ros version](/images/ros-noetic/ros_version.png)
 
----
-## Verificando e Instalando o Gazebo (gazebo_ros_pkg).
-Fluxograma para a verificação/instalação do Gazebo. </br>
-![flowchart gazebo](/images/flowchart_gazebo.png)
-
-**Passo 1:** Verificando se o gazebo está instalado. <br/>
- -> Existem algumas maneiras de verificar se o Gazebo foi instalado na máquina.
-
-*Passo 1.1:* O ícone deve estar no menu do sistema. <br/>
- -> *Se o gazebo foi instalado junto com o ROS-1 possívelmente apareceram esses ícones, caso apareça apenas o ícone do Gazebo é oportuno realizar os outros testes.* <br/>
-![gazebo icons](/images/gazebo/gazebo_icon.png)
-
-*Passo 1.2:* Verificar a versão do Gazebo, no terminal.
+**Passo 4:** Criando pasta 'ws_moveit'.
 ```bash
-gazebo --version
+mkdir -p ~/ws_moveit/src
 ```
-Possíveis retornos: <br/>
-```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo version](/images/gazebo/gazebo_version.png)
 
-```else( Caso não esteja ):``` <br/>
-![gazebo version not found](/images/gazebo/gazebo_version_not_found.png)
-
-*Passo 1.3:* Verificar se as pastas '/gzserver' e '/gzclient' estão instaladas, no terminal. 
+**Passo 5:** Entrando na pasta 'ws_moveit'.
 ```bash
-which gzserver && which gzclient
+cd ~/ws_moveit/src
 ```
-Possiveis retornos: <br/>
-```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo folder](/images/gazebo/gazebo_folder.png)
 
-```else( Caso não esteja ):``` <br/>
-![gazebo folder not found](/images/gazebo/gazebo_folder_not_found.png)
+**Passo 6:** Baixando fonte do MoveIt.
 
-*Passo 1.4:* Tentar executar o comando para abrir o gazebo, no terminal.
+*Passo 6.1:* Inicializando wstool.
 ```bash
-gazebo
+wstool init .
 ```
-Possíveis retornos: <br/>
-```if( Se estiver instalado, esse será o retorno ):``` <br/>
-![gazebo open](/images/gazebo/gazebo.png) <br/>
-![gazebo terminal](/images/gazebo/gazebo_terminal.png)
 
-```else( Caso não esteja ):``` <br/>
-![gazebo not found](/images/gazebo/gazebo_not_found.png)
-
-**Passo 2:** Instalando o Gazebo (gazebo_ros_pkg).
-
-*Passo 2.1:* Instalando Debians pré construídos.
+*Passo 6.2:* Fundindo wstool.
 ```bash
-sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+wstool merge -t . https://raw.githubusercontent.com/ros-planning/moveit/master/moveit.rosinstall
 ```
-* Onde está a palavra noetic pode ser substituída por qualquer versão, tais como:
-    * ROS - Lunar
-    * ROS - Kinetic
-    * ROS - Indigo
 
-*Passo 2.2:* Instalando o Gazebo
+*Passo 6.3:* Removendo moveit_tutorials de wstool.
 ```bash
-sudo apt-get install -y libgazebo11-dev
+wstool remove  moveit_tutorials
 ```
- -> Após terminar a instalação volte à **[verificação do Gazebo](https://github.com/Math09/infnet_ros/tree/ros_noetic#verificando-e-instalando-o-gazebo-gazebo_ros_pkg)** para determinar se foi instalado corretamente.
 
----
-Depois que terminar todas as instalações - ROS-1 (Noetic) e Gazebo (gazebo_ros_pkg) - é necessário criar e configurar a pasta catkin_ws. A fim de resolver isso criei o tutorial a seguir:
+*Passo 6.4:* Atualizando wstool.
+```bash
+wstool update -t.
+```
 
-* [Criando e configurando workspace catkin_ws.](https://github.com/Math09/infnet_ros/tree/catkin_ws)
+**Passo 7:** Baixar código de exemplo.
+```bash
+git clone ros-planning/moveit_tutorials -b master
+```
+
+```bash
+git clone ros-planning/panda_moveit_config -b melodic-devel
+```
+
+**Passo 8:** Build catkin workspace.
+```bash
+rosdep install -y --from-paths . --ignore-src --rosdistro noetic
+```
+
+```bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros-testing/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
+
+```bash
+sudo apt update
+```
+
+```bash
+cd ~/ws_moveit
+```
+
+```bash
+catkin config --extend /opt/ros/noetic --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+```bash
+catkin build
+```
